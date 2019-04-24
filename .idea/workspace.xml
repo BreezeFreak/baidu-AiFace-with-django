@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de9f1738-aa54-4d9e-b8f4-9d952e89a294" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/imageutil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="de9f1738-aa54-4d9e-b8f4-9d952e89a294" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/imageutil.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
+            <state relative-caret-position="4">
+              <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -255,12 +252,12 @@
       <workItem from="1555895897374" duration="562000" />
       <workItem from="1555982413530" duration="506000" />
       <workItem from="1556069569649" duration="598000" />
-      <workItem from="1556095762447" duration="1585000" />
+      <workItem from="1556095762447" duration="2367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37869000" />
+    <option name="totallyTimeSpent" value="38651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="502" y="170" width="1080" height="796" extended-state="0" />
@@ -280,7 +277,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295711" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5009634" side_tool="true" weight="0.27149323" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4990366" visible="true" weight="0.2246696" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4990366" visible="true" weight="0.40234947" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -493,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/imageutil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
+        <state relative-caret-position="4">
+          <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
