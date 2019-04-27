@@ -2,11 +2,9 @@ import pytest
 from django.test import TransactionTestCase
 from mixer.backend.django import mixer
 from rest_framework import status
-from rest_framework.test import RequestsClient, APITestCase
+from rest_framework.test import RequestsClient
 
-from apps.client.models import Client
 from apps.user.models import User, UserToken
-from apps.user.serializers import WechatUserSerializer
 
 pytestmark = pytest.mark.django_db
 
@@ -25,17 +23,12 @@ class UserTestCase(TransactionTestCase):
 
     def test_get_info(self):
         url = 'http://127.0.0.1:10001/api/user/getInfo/'
-        response = self.client.get(url=url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        print(f'\nTestCase: {url} \nresponse: {response.json()}')
+        return self.client.get(url=url)
 
     def test_mina_login(self):
         code = '023MOF8I1OMzX10y4j6I1zCN8I1MOF8j'
         url = f'http://127.0.0.1:10001/api/mina/login?cid={self.cid}&code={code}'
-        response = self.client.get(url)
-        error_msg = response.json()['m']
-        self.assertEqual(error_msg.split(':')[0], 'invalid appid hint')
-        print(f'\nTestCase: {url} \nresponse: {response.json()}')
+        return self.client.get(url=url)
 
     def test_mina_save_info(self):
         url = 'http://127.0.0.1:10001/api/mina/saveUserInfo/'
@@ -48,11 +41,29 @@ class UserTestCase(TransactionTestCase):
             'province': user.province,
             'city': user.city
         }
-        # fields = [i for i in WechatUserSerializer().fields]
-        # model_fields = [f.name for f in User._meta.get_fields()]
-        # print(fields)
-        # print(model_fields)
-        response = self.client.post(url=url, data=data)
-        print(response.text)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        print(f'\nTestCase: {url} \nresponse: {response.json()}')
+        return self.client.post(url=url, data=data)
+
+    def test_with_right_headers(self, test_status=status.HTTP_200_OK):
+        response = self.test_get_info()
+        self.assertEqual(response.status_code, test_status)
+        print_short_cut(response)
+
+        response = self.test_mina_login()
+        error_msg = response.json()['m']
+        self.assertRegex(error_msg, '^invalid appid hint')
+        print_short_cut(response)
+
+        response = self.test_mina_save_info()
+        self.assertEqual(response.status_code, test_status)
+        print_short_cut(response)
+
+    def test_with_wrong_headers(self):
+        self.client.headers = {
+            'X-TOKEN': 'wrong_token',
+            'X-CID': str(self.cid)
+        }
+        self.test_with_right_headers(test_status=status.HTTP_401_UNAUTHORIZED)
+
+
+def print_short_cut(response):
+    print(f'\nTestCase: {response.url} \nresponse: {response.json()}')

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de9f1738-aa54-4d9e-b8f4-9d952e89a294" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/tests/test_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/tests/test_user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/imageutil_copy.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/tests/test_user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,12 +135,13 @@
         <option value="$PROJECT_DIR$/utils/sql_insert/remark_summarize" />
         <option value="$PROJECT_DIR$/utils/sql_insert/remark_mouth" />
         <option value="$PROJECT_DIR$/utils/sql_insert/remark_eyebrow" />
+        <option value="$PROJECT_DIR$/apps/tests/test_user.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="377" />
-    <option name="y" value="46" />
+    <option name="x" value="141" />
+    <option name="y" value="64" />
     <option name="width" value="1543" />
     <option name="height" value="967" />
   </component>
@@ -156,7 +170,7 @@
               <item name="aiface_baidu" type="b2602c69:ProjectViewProjectNode" />
               <item name="aiface_baidu" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="aiface" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aiface_baidu" type="b2602c69:ProjectViewProjectNode" />
@@ -184,6 +198,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/tests" />
       <recent name="$PROJECT_DIR$/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/config/dev" />
@@ -253,16 +268,15 @@
       <workItem from="1556095762447" duration="3756000" />
       <workItem from="1556155888900" duration="576000" />
       <workItem from="1556242149207" duration="3127000" />
-      <workItem from="1556328162106" duration="568000" />
+      <workItem from="1556328162106" duration="2254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44311000" />
+    <option name="totallyTimeSpent" value="45997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="377" y="46" width="1543" height="967" extended-state="0" />
-    <editor active="true" />
+    <frame x="141" y="64" width="1543" height="967" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20719521" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -531,6 +545,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/tests/test_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
