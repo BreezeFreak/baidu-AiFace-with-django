@@ -1,7 +1,6 @@
 import json
 
 import pytest
-from django.http import HttpResponsePermanentRedirect
 from mixer.backend.django import mixer
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -17,11 +16,7 @@ def print_short_cut(response):
 
 
 class UserTestCase(APITestCase):
-    """
-    change the client as default, which cause many adjustment to fit in.
-    finally done, fuck... save as a backup (the whole project is a backup)
-    to compare with the drf one.
-    """
+
     def setUp(self):
         user_token = mixer.blend(UserToken)
         self.token = user_token.token_string
@@ -54,7 +49,7 @@ class UserTestCase(APITestCase):
     def test_mina_login(self):
         code = '023MOF8I1OMzX10y4j6I1zCN8I1MOF8j'
         path = f'/api/mina/login?cid={self.cid}&code={code}'
-        return self.client.get(path=path, follow=True)  # where there is a HttpResponsePermanentRedirect object
+        return self.client.get(path=path, follow=True)
 
     def test_mina_save_info(self):
         path = '/api/mina/saveUserInfo/'
@@ -82,17 +77,20 @@ class UserTestCase(APITestCase):
     def test_saving_wrong_user_data(self):
         user = mixer.blend(User)
         self.user_data = {
-            'nickName': '',  # blank
-            # 'avatarpath': user.avatar,  # missing
-            'gender': str(user.gender),  # not int
+            'nickName': '',
+            # 'avatarUrl': user.avatar,
+            'gender': 100,
             'country': user.country,
-            # 'province': user.province, # missing
+            # 'province': user.province,
             'city': user.city
         }
         response = self.test_mina_save_info()
+        print_short_cut(response)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.json()['c'], -1)
-        print_short_cut(response)
+        self.assertRegex(response.json()['m']['nickName'][0], 'This field may not be blank.')
+        self.assertRegex(response.json()['m']['avatarUrl'][0], 'This field is required.')
+        self.assertRegex(response.json()['m']['gender'][0], 'is not a valid choice.$')
 
     # #以下 authentication 验证
     def test_with_wrong_headers(self):
