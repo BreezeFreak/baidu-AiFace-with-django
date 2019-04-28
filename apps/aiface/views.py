@@ -4,10 +4,10 @@ from PIL import Image
 from aip import AipFace
 from django.conf import settings
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from hurry.filesize import size
 
-
+from apps.aiface.ImageAI import ImageAI
 
 
 def index(request):
@@ -56,3 +56,13 @@ def aiface_baidu_api(img):
 #     from django.core.files.uploadedfile import InMemoryUploadedFile
 #     Image.crop
 
+
+def imageai(request):
+    img = request.FILES.get('img')
+    valid = img_validate(img)
+    if valid != 1:
+        return JsonResponse({'msg': valid})
+
+    # img = Image.open(img)
+    result = ImageAI(img.name)
+    return HttpResponse(result)

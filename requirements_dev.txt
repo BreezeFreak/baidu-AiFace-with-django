@@ -2,3 +2,23 @@
 
 djangorestframework==3.9.2
 Pillow==6.0.0
+
+
+# ImageAI
+
+## too big
+# tensorflow
+# opencv-python
+
+numpy
+scipy
+matplotlib
+h5py
+keras
+
+# https://github.com/OlafenwaMoses/ImageAI/raw/master/dist/imageai-1.0.2-py3-none-any.whl
+
+
+# learning-models
+# https://github.com/fchollet/deep-learning-models/
+# https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels.h5
