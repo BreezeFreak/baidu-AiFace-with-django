@@ -1,4 +1,4 @@
 baidu-aip==2.2.13.0
-Django==2.2
+Django==2.2.8
 hurry.filesize==0.9
 
